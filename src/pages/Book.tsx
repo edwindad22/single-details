@@ -5,7 +5,7 @@ import bookCover from '../assets/single-details-book-cover.jpg'
 const features = [
   {
     icon: <Heart className="w-5 h-5 text-rose-deep" />,
-    text: 'Navigate heartbreak and rejection with grace',
+    text: 'Face heartbreak and rejection honestly',
   },
   {
     icon: <Leaf className="w-5 h-5 text-sage-dark" />,
@@ -17,7 +17,7 @@ const features = [
   },
   {
     icon: <BookOpen className="w-5 h-5 text-warm-muted" />,
-    text: 'Walk through intentional healing and wholeness',
+    text: 'Do the real work of healing',
   },
 ]
 
@@ -59,9 +59,8 @@ export default function Book() {
             </div>
 
             <p className="font-sans text-warm-muted leading-relaxed text-lg">
-              A faith-based guide for every single woman who needs to know that God is not absent
-              in this season — He is actively at work, strengthening, shaping, and positioning her
-              for everything He has lovingly prepared.
+              A faith-based book for every single woman who needs to know that God is not absent
+              in this season — He is at work in it, for everything He already has for her.
             </p>
 
             <ul className="flex flex-col gap-3">
@@ -112,14 +111,12 @@ export default function Book() {
           </h2>
           <p className="font-sans text-warm-muted leading-relaxed text-lg mb-8">
             Single Details was written as a prayer — that every woman who reads it will walk away
-            knowing she is seen, she is known, and she is deeply loved by a God who is intentional
-            about every season of her life.
+            knowing she is seen, known, and loved by a God who doesn't miss a thing in her life.
           </p>
           <blockquote className="scripture max-w-2xl mx-auto text-left">
             <p className="font-serif text-xl leading-relaxed mb-2">
-              "My prayer is that as you read, you will discover that God is actively at work in
-              your life — strengthening, shaping, and positioning you for everything He has
-              lovingly prepared for you."
+              "My prayer is that as you read, you will see that God is at work in your life —
+              for everything He already has for you."
             </p>
             <footer className="font-sans text-sm text-rose-deep font-bold not-italic">
               — Jesula, Single Details

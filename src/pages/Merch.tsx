@@ -23,7 +23,7 @@ const merch: MerchItem[] = [
     id: 1,
     title: 'Single Details Prayer Journal',
     category: 'Journal',
-    description: 'A guided prayer journal designed to help you deepen your conversations with God through this season.',
+    description: 'A prayer journal to help you talk to God honestly through this season.',
     icon: <BookOpen className="w-8 h-8" />,
     color: 'from-rose/20 to-blush-light',
     image: journalCover,
@@ -138,8 +138,8 @@ export default function Merch() {
           Merch &amp; Resources
         </h1>
         <p className="font-sans text-warm-muted leading-relaxed max-w-xl mx-auto text-lg">
-          Carry the message of Single Details into your everyday life. Each piece is created to
-          encourage, remind, and inspire the woman walking in her season with faith.
+          Carry the message of Single Details with you. Each piece is made to
+          encourage, remind, and inspire the woman carrying her faith into every room she walks into.
         </p>
       </section>
 

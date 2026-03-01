@@ -6,7 +6,7 @@ const gifts = [
     number: '01',
     icon: <BookOpen className="w-7 h-7 text-rose-deep" />,
     title: '5 Journal Prompts for Wholeness',
-    desc: 'Five guided questions to help you reflect deeply on your identity, your healing, and your purpose in this season.',
+    desc: 'Five questions to help you think honestly about who you are, where you are healing, and what you are called to.',
     color: 'bg-blush-light border-blush',
     iconBg: 'bg-white',
   },
@@ -14,7 +14,7 @@ const gifts = [
     number: '02',
     icon: <Star className="w-7 h-7 text-sage-dark" />,
     title: '7-Day Mind Renewal Scripture Guide',
-    desc: 'Seven days, seven Scriptures, and seven declarations to renew your mind and anchor your heart in truth.',
+    desc: 'Seven days, seven Scriptures, and seven declarations to renew your mind and stand firm in truth.',
     color: 'bg-sage/10 border-sage/30',
     iconBg: 'bg-white',
   },
@@ -22,7 +22,7 @@ const gifts = [
     number: '03',
     icon: <Heart className="w-7 h-7 text-rose" />,
     title: '"Becoming Whole Before Love" Mini Devotional',
-    desc: 'A short but powerful devotional journey through healing, identity, and surrender — so you enter every season from a place of wholeness.',
+    desc: 'A short devotional through healing, identity, and surrender — so you walk into every season whole.',
     color: 'bg-blush-light border-blush',
     iconBg: 'bg-white',
   },
@@ -104,7 +104,7 @@ export default function Subscribe() {
             <p className="font-sans text-warm-muted leading-relaxed">
               <strong className="text-warm-brown">Plus,</strong> as a community member you'll
               be the first to hear about book updates, launch announcements, events, and
-              blog posts — all designed to nourish your faith journey.
+              blog posts — all to keep you fed and close to God.
             </p>
           </div>
         </div>
@@ -122,7 +122,7 @@ export default function Subscribe() {
             </h2>
             <p className="font-sans text-blush-medium">
               Enter your details below to receive your free gift and join thousands of
-              sisters walking this journey with intention.
+              sisters walking this same road.
             </p>
           </div>
 

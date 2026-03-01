@@ -1,6 +1,6 @@
 # Single Details
 
-Personal brand site for **Jesula** — author of _Single Details_, a faith-based book for single women walking a season of preparation, healing, and purpose.
+Personal brand site for **Jesula** — author of _Single Details_, a faith-based book for single women in a season they didn't plan for.
 
 **Live pages**
 | Route | Description |

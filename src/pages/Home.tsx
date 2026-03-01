@@ -60,13 +60,13 @@ const pillars = [
   {
     icon: <Leaf className="w-8 h-8 text-sage-dark" />,
     title: 'Grow',
-    desc: 'Deepen your intimacy with God and discover who He created you to be.',
+    desc: 'Grow closer to God and discover who He made you to be.',
     color: 'bg-sage/10 border-sage/30',
   },
   {
     icon: <Star className="w-8 h-8 text-rose" />,
     title: 'Embrace',
-    desc: 'Step into singleness as a gift — a divinely appointed season of purpose.',
+    desc: 'Receive singleness as a gift — a season God set apart for you.',
     color: 'bg-blush-light border-blush',
   },
 ]
@@ -93,7 +93,7 @@ export default function Home() {
           <div className="animate-fade-in-up stagger-1 inline-flex items-center gap-2 bg-blush/40 border border-blush rounded-full px-4 py-1.5 mb-8">
             <Leaf className="w-4 h-4 text-sage-dark" />
             <span className="font-sans text-xs font-bold text-warm-muted tracking-widest uppercase">
-              A Faith Journey for Single Women
+              For Single Women
             </span>
           </div>
 
@@ -110,10 +110,10 @@ export default function Home() {
           {/* Welcome message */}
           <p className="animate-fade-in-up stagger-4 font-sans text-warm-muted text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
             Welcome to Single Details — a community where your season of singleness is seen,
-            honored, and celebrated as the sacred space God designed it to be.
+            honored, and valued for what it truly is.
             You are being <strong className="text-warm-brown font-bold">prepared</strong>,{' '}
-            <strong className="text-warm-brown font-bold">positioned</strong>, and{' '}
-            <strong className="text-warm-brown font-bold">lovingly shaped</strong> for purpose.
+            <strong className="text-warm-brown font-bold">called</strong>, and{' '}
+            <strong className="text-warm-brown font-bold">loved</strong> for more than you know.
           </p>
 
           {/* CTA buttons */}
@@ -188,14 +188,14 @@ export default function Home() {
                 about my worth.
               </p>
               <p className="font-sans text-warm-muted leading-relaxed">
-                However, what began as a painful season became a sacred turning point. In that
+                However, what began as a painful season became a turning point. In that
                 vulnerable place, kneeling before Him with my alabaster box — broken and
                 surrendered — God met me, not with condemnation, but with compassion and
                 restoration.
               </p>
               <p className="font-sans text-warm-muted leading-relaxed">
-                I came to understand that healing is not automatic but an intentional process.
-                Forgiveness, surrender, and inner work are not optional; they are foundational
+                I came to understand that healing is not automatic — it requires real work.
+                Forgiveness, surrender, and honest self-examination are not optional; they are foundational
                 to wholeness and a healthy relationship with God and others.
               </p>
               <blockquote className="scripture">
