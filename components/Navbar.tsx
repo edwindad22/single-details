@@ -18,7 +18,7 @@ export default function Navbar() {
   const pathname = usePathname()
 
   return (
-    <nav className="sticky top-0 z-50 bg-cream/95 dark:bg-[#1C1218]/95 backdrop-blur-sm border-b border-blush dark:border-[#3D1F30] shadow-sm transition-colors duration-300">
+    <nav className="sticky top-0 z-50 bg-cream/95 dark:bg-[#140A0E]/95 backdrop-blur-sm border-b border-blush dark:border-[#4A1E30] shadow-sm transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
 
         <Link href="/" className="flex items-center gap-2 no-underline group">
@@ -40,7 +40,7 @@ export default function Navbar() {
                 className={`nav-link font-sans text-sm tracking-wide transition-colors duration-150 no-underline pb-0.5 ${
                   active
                     ? 'text-rose-deep font-bold nav-active'
-                    : 'text-warm-muted dark:text-[#C09AA8] hover:text-rose-deep dark:hover:text-rose'
+                    : 'text-warm-muted dark:text-[#E8A0B0] hover:text-rose-deep dark:hover:text-rose'
                 }`}
               >
                 {link.label}
@@ -62,7 +62,7 @@ export default function Navbar() {
         <div className="md:hidden flex items-center gap-3">
           <ThemeToggle />
           <button
-            className="text-warm-muted dark:text-[#C09AA8] hover:text-rose-deep transition-colors"
+            className="text-warm-muted dark:text-[#E8A0B0] hover:text-rose-deep transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
@@ -79,7 +79,7 @@ export default function Navbar() {
           menuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="bg-cream dark:bg-[#1C1218] border-t border-blush dark:border-[#3D1F30] px-4 py-4 flex flex-col gap-4">
+        <div className="bg-cream dark:bg-[#140A0E] border-t border-blush dark:border-[#4A1E30] px-4 py-4 flex flex-col gap-4">
           {navLinks.map((link, i) => {
             const active = pathname === link.href
             return (
@@ -91,7 +91,7 @@ export default function Navbar() {
                 className={`font-sans text-base no-underline transition-all duration-200 pl-2 border-l-2 ${
                   active
                     ? 'text-rose-deep font-bold border-rose-deep'
-                    : 'text-warm-muted dark:text-[#C09AA8] hover:text-rose-deep border-transparent hover:border-rose/40'
+                    : 'text-warm-muted dark:text-[#E8A0B0] hover:text-rose-deep border-transparent hover:border-rose/40'
                 }`}
               >
                 {link.label}

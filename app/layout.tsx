@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Lato } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -50,13 +51,11 @@ export default function RootLayout({
       className={`${playfairDisplay.variable} ${lato.variable}`}
       suppressHydrationWarning
     >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
-      </head>
       <body
-        className="min-h-screen flex flex-col bg-cream dark:bg-[#1C1218] text-warm-brown dark:text-cream font-sans antialiased relative transition-colors duration-300"
+        className="min-h-screen flex flex-col bg-cream dark:bg-[#140A0E] text-warm-brown dark:text-cream font-sans antialiased relative transition-colors duration-300"
         suppressHydrationWarning
       >
+        <Script id="theme-init" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <ThemeProvider>
           <FloralBackground />
           <div className="relative flex flex-col min-h-screen">

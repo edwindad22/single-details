@@ -33,7 +33,7 @@ export default function HomePage() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-20 text-center">
           <div className="animate-fade-in-up stagger-1 inline-flex items-center gap-2 bg-blush/40 dark:bg-blush/10 border border-blush dark:border-blush/30 rounded-full px-4 py-1.5 mb-8">
             <Leaf className="w-4 h-4 text-sage-dark" />
-            <span className="font-sans text-xs font-bold text-warm-muted dark:text-[#C09AA8] tracking-widest uppercase">
+            <span className="font-sans text-xs font-bold text-warm-muted dark:text-[#E8A0B0] tracking-widest uppercase">
               For Single Women
             </span>
           </div>
@@ -47,7 +47,7 @@ export default function HomePage() {
             </em>
           </h1>
 
-          <p className="animate-fade-in-up stagger-4 font-sans text-warm-muted dark:text-[#C09AA8] text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
+          <p className="animate-fade-in-up stagger-4 font-sans text-warm-muted dark:text-[#E8A0B0] text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
             Welcome to Single Details — a community where your season of singleness is seen,
             honored, and valued for what it truly is.
             You are being <strong className="text-warm-brown dark:text-cream font-bold">prepared</strong>,{' '}
@@ -79,7 +79,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <p className="animate-fade-in-up stagger-6 font-sans text-sm text-warm-light dark:text-[#9B7A88] italic">
+          <p className="animate-fade-in-up stagger-6 font-sans text-sm text-warm-light dark:text-[#D48090] italic">
             God is in the Single Details.
           </p>
         </div>
@@ -117,14 +117,14 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="bg-white dark:bg-[#2A1D26] rounded-3xl p-8 shadow-xl">
+          <div className="bg-white dark:bg-[#241520] rounded-3xl p-8 shadow-xl">
             <EmailCapture compact />
           </div>
         </div>
       </section>
 
-      <section className="bg-cream dark:bg-[#1C1218] py-12 px-4 text-center transition-colors duration-300">
-        <p className="font-serif text-xl italic text-warm-muted dark:text-[#C09AA8]">
+      <section className="bg-cream dark:bg-[#140A0E] py-12 px-4 text-center transition-colors duration-300">
+        <p className="font-serif text-xl italic text-warm-muted dark:text-[#E8A0B0]">
           &ldquo;God is in the Single Details.&rdquo;
         </p>
         <div className="w-8 h-0.5 bg-rose rounded mx-auto mt-4" />

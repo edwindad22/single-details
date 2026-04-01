@@ -86,7 +86,7 @@ export default function MerchGrid() {
   return (
     <>
       {/* Category filter */}
-      <section className="sticky top-[72px] z-40 bg-cream dark:bg-[#1C1218] border-b border-blush dark:border-[#3D1F30] py-3 px-4 sm:px-6 transition-colors duration-300">
+      <section className="sticky top-[72px] z-40 bg-cream dark:bg-[#140A0E] border-b border-blush dark:border-[#4A1E30] py-3 px-4 sm:px-6 transition-colors duration-300">
         <div className="flex gap-2 max-w-6xl mx-auto overflow-x-auto pb-1">
           {categories.map((cat) => (
             <button
@@ -95,7 +95,7 @@ export default function MerchGrid() {
               className={`px-4 py-1.5 rounded-full font-sans text-sm font-bold whitespace-nowrap transition-all duration-150 ${
                 activeCategory === cat
                   ? 'bg-rose-deep text-white shadow-sm'
-                  : 'bg-cream-dark dark:bg-[#2A1D26] text-warm-muted dark:text-[#C09AA8] hover:bg-blush hover:text-rose-deep'
+                  : 'bg-cream-dark dark:bg-[#241520] text-warm-muted dark:text-[#E8A0B0] hover:bg-blush hover:text-rose-deep'
               }`}
             >
               {cat}
@@ -105,7 +105,7 @@ export default function MerchGrid() {
       </section>
 
       {/* Grid */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 bg-cream dark:bg-[#1C1218] transition-colors duration-300">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 bg-cream dark:bg-[#140A0E] transition-colors duration-300">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((item, i) =>
             item.coverImage ? (
@@ -114,12 +114,12 @@ export default function MerchGrid() {
                 key={item.id}
                 className={`flip-card h-[380px] rounded-2xl animate-fade-in-up ${staggerClass(i)}`}
               >
-                <div className="flip-card-inner rounded-2xl shadow-sm border border-blush dark:border-[#3D1F30]">
+                <div className="flip-card-inner rounded-2xl shadow-sm border border-blush dark:border-[#4A1E30]">
                   {/* Front */}
                   {item.category === 'book' ? (
                     <Link
                       href="/book"
-                      className="flip-card-front bg-white dark:bg-[#2A1D26] rounded-2xl block"
+                      className="flip-card-front bg-white dark:bg-[#241520] rounded-2xl block"
                       aria-label={`View details for ${item.title}`}
                     >
                       <Image
@@ -137,7 +137,7 @@ export default function MerchGrid() {
                       </span>
                     </Link>
                   ) : (
-                    <div className="flip-card-front bg-white dark:bg-[#2A1D26] rounded-2xl relative">
+                    <div className="flip-card-front bg-white dark:bg-[#241520] rounded-2xl relative">
                       <Image
                         src={item.coverImage}
                         alt={item.title}
@@ -145,20 +145,20 @@ export default function MerchGrid() {
                         className="object-cover rounded-2xl"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
-                      <span className="absolute top-3 right-3 bg-white/85 dark:bg-[#1C1218]/85 border border-blush dark:border-[#3D1F30] text-rose-deep font-sans text-xs font-bold px-3 py-1 rounded-full z-10">
+                      <span className="absolute top-3 right-3 bg-white/85 dark:bg-[#140A0E]/85 border border-blush dark:border-[#4A1E30] text-rose-deep font-sans text-xs font-bold px-3 py-1 rounded-full z-10">
                         {item.category.charAt(0).toUpperCase() + item.category.slice(1)}
                       </span>
                     </div>
                   )}
 
                   {/* Back */}
-                  <div className="flip-card-back bg-white dark:bg-[#2A1D26] rounded-2xl flex flex-col p-6 justify-between">
+                  <div className="flip-card-back bg-white dark:bg-[#241520] rounded-2xl flex flex-col p-6 justify-between">
                     <div className="flex flex-col gap-3">
-                      <span className="bg-blush dark:bg-[#3D1F30] border border-blush dark:border-[#3D1F30] text-rose-deep font-sans text-xs font-bold px-3 py-1 rounded-full w-fit">
+                      <span className="bg-blush dark:bg-[#4A1E30] border border-blush dark:border-[#4A1E30] text-rose-deep font-sans text-xs font-bold px-3 py-1 rounded-full w-fit">
                         {item.category.charAt(0).toUpperCase() + item.category.slice(1)}
                       </span>
                       <h3 className="font-serif text-xl text-warm-brown dark:text-cream">{item.title}</h3>
-                      <p className="font-sans text-sm text-warm-muted dark:text-[#C09AA8] leading-relaxed">
+                      <p className="font-sans text-sm text-warm-muted dark:text-[#E8A0B0] leading-relaxed">
                         {item.description}
                       </p>
                     </div>
@@ -181,19 +181,19 @@ export default function MerchGrid() {
               /* Standard card */
               <div
                 key={item.id}
-                className={`bg-white dark:bg-[#2A1D26] rounded-2xl shadow-sm border border-blush dark:border-[#3D1F30] overflow-hidden flex flex-col group hover:shadow-md transition-shadow duration-200 animate-fade-in-up ${staggerClass(i)}`}
+                className={`bg-white dark:bg-[#241520] rounded-2xl shadow-sm border border-blush dark:border-[#4A1E30] overflow-hidden flex flex-col group hover:shadow-md transition-shadow duration-200 animate-fade-in-up ${staggerClass(i)}`}
               >
                 <div className={`h-48 bg-gradient-to-br ${categoryColors[item.category] ?? 'from-blush/30 to-cream-medium'} flex items-center justify-center relative`}>
-                  <div className="w-20 h-20 rounded-full bg-white/70 dark:bg-[#1C1218]/60 flex items-center justify-center text-rose-deep">
+                  <div className="w-20 h-20 rounded-full bg-white/70 dark:bg-[#140A0E]/60 flex items-center justify-center text-rose-deep">
                     {iconForItem(item)}
                   </div>
-                  <span className="absolute top-3 right-3 bg-white/80 dark:bg-[#1C1218]/80 border border-blush dark:border-[#3D1F30] text-rose-deep font-sans text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="absolute top-3 right-3 bg-white/80 dark:bg-[#140A0E]/80 border border-blush dark:border-[#4A1E30] text-rose-deep font-sans text-xs font-bold px-3 py-1 rounded-full">
                     {item.category.charAt(0).toUpperCase() + item.category.slice(1)}
                   </span>
                 </div>
                 <div className="flex flex-col gap-3 p-6 flex-1">
                   <h3 className="font-serif text-xl text-warm-brown dark:text-cream">{item.title}</h3>
-                  <p className="font-sans text-sm text-warm-muted dark:text-[#C09AA8] leading-relaxed flex-1">
+                  <p className="font-sans text-sm text-warm-muted dark:text-[#E8A0B0] leading-relaxed flex-1">
                     {item.description}
                   </p>
                   <div className="mt-auto">
@@ -206,10 +206,10 @@ export default function MerchGrid() {
         </div>
 
         {/* Coming soon note */}
-        <div className="mt-12 text-center bg-blush-light dark:bg-[#2A1D26] border border-blush dark:border-[#3D1F30] rounded-3xl p-8 max-w-2xl mx-auto animate-fade-in-up stagger-3">
+        <div className="mt-12 text-center bg-blush-light dark:bg-[#241520] border border-blush dark:border-[#4A1E30] rounded-3xl p-8 max-w-2xl mx-auto animate-fade-in-up stagger-3">
           <ShoppingBag className="w-10 h-10 text-rose mx-auto mb-3" />
           <h3 className="font-serif text-2xl text-warm-brown dark:text-cream mb-2">Amazon Links Coming Soon</h3>
-          <p className="font-sans text-warm-muted dark:text-[#C09AA8] leading-relaxed">
+          <p className="font-sans text-warm-muted dark:text-[#E8A0B0] leading-relaxed">
             All merch will be available on Amazon when the book launches.
             Join the community to be notified the moment everything goes live!
           </p>

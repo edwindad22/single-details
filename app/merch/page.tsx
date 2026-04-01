@@ -18,7 +18,7 @@ export default function MerchPage() {
         <h1 className="font-serif text-4xl md:text-5xl text-warm-brown dark:text-cream mt-3 mb-4">
           Merch &amp; Resources
         </h1>
-        <p className="font-sans text-warm-muted dark:text-[#C09AA8] leading-relaxed max-w-xl mx-auto text-lg">
+        <p className="font-sans text-warm-muted dark:text-[#E8A0B0] leading-relaxed max-w-xl mx-auto text-lg">
           Carry the message of Single Details with you. Each piece is made to
           encourage, remind, and inspire the woman carrying her faith into every room she walks into.
         </p>

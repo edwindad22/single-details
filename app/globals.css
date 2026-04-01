@@ -38,10 +38,10 @@
 }
 
 .dark {
-  --hero-grad:      linear-gradient(135deg, #1C1218 0%, #27152A 40%, #3D1F35 100%);
-  --hero-grad-alt:  linear-gradient(135deg, #1C1218 0%, #27152A 60%, #3D1F35 100%);
-  --hero-grad-wide: linear-gradient(135deg, #1C1218 0%, #27152A 80%, #3D1F35 100%);
-  --form-grad:      linear-gradient(135deg, #2A0E1A 0%, #5C1E35 60%, #8A3050 100%);
+  --hero-grad:      linear-gradient(135deg, #140A0E 0%, #1C1020 40%, #2E0F1E 100%);
+  --hero-grad-alt:  linear-gradient(135deg, #140A0E 0%, #1C1020 60%, #2E0F1E 100%);
+  --hero-grad-wide: linear-gradient(135deg, #140A0E 0%, #1C1020 80%, #2E0F1E 100%);
+  --form-grad:      linear-gradient(135deg, #1A0810 0%, #4A1428 60%, #7A2840 100%);
 }
 
 .grad-hero      { background: var(--hero-grad); }
@@ -58,7 +58,7 @@
     background-color: #FDF8F3;
   }
   html.dark {
-    background-color: #1C1218;
+    background-color: #140A0E;
   }
 
   body {
@@ -72,7 +72,7 @@
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   .dark body {
-    background-color: #1C1218;
+    background-color: #140A0E;
     color: #FDF8F3;
   }
 }
@@ -112,7 +112,17 @@ blockquote.scripture {
   font-style: italic;
   color: #7B5E57;
 }
-.dark blockquote.scripture { color: #C09AA8; }
+.dark blockquote.scripture { color: #E8A0B0; border-color: #4A1E30; }
+
+/* ── Moonlight & night sky animations ────────────────────────────────────── */
+@keyframes star_twinkle {
+  0%, 100% { opacity: 0.85; }
+  50%      { opacity: 0.20; }
+}
+@keyframes moon_breathe {
+  0%, 100% { opacity: 0.80; }
+  50%      { opacity: 1.0; }
+}
 
 /* ── Floral wind / 3D sway animations ────────────────────────────────────── */
 @keyframes floral_sway_tr {

@@ -29,7 +29,7 @@ export default function BookPage() {
                   className="w-64 h-80 md:w-72 md:h-96 object-cover rounded-2xl shadow-2xl border border-blush/40"
                 />
               ) : (
-                <div className="w-64 h-80 md:w-72 md:h-96 rounded-2xl shadow-2xl border border-blush/40 bg-blush-light dark:bg-[#2A1D26] flex items-center justify-center">
+                <div className="w-64 h-80 md:w-72 md:h-96 rounded-2xl shadow-2xl border border-blush/40 bg-blush-light dark:bg-[#241520] flex items-center justify-center">
                   <BookOpen className="w-20 h-20 text-rose" />
                 </div>
               )}
@@ -48,7 +48,7 @@ export default function BookPage() {
               <p className="font-serif text-xl italic text-rose mt-1">by {book.author}</p>
             </div>
 
-            <p className="font-sans text-warm-muted dark:text-[#C09AA8] leading-relaxed text-lg">
+            <p className="font-sans text-warm-muted dark:text-[#E8A0B0] leading-relaxed text-lg">
               {book.description}
             </p>
 
@@ -60,10 +60,10 @@ export default function BookPage() {
                   const Icon   = icons[i % icons.length]
                   return (
                     <li key={f} className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-white dark:bg-[#2A1D26] border border-blush dark:border-[#3D1F30] flex items-center justify-center flex-shrink-0 shadow-sm">
+                      <div className="w-8 h-8 rounded-full bg-white dark:bg-[#241520] border border-blush dark:border-[#4A1E30] flex items-center justify-center flex-shrink-0 shadow-sm">
                         <Icon className={`w-5 h-5 ${colors[i % colors.length]}`} />
                       </div>
-                      <span className="font-sans text-warm-muted dark:text-[#C09AA8]">{f}</span>
+                      <span className="font-sans text-warm-muted dark:text-[#E8A0B0]">{f}</span>
                     </li>
                   )
                 })}
@@ -110,7 +110,7 @@ export default function BookPage() {
             </div>
 
             {book.status === 'coming-soon' && (
-              <p className="font-sans text-sm text-warm-light dark:text-[#9B7A88] italic">
+              <p className="font-sans text-sm text-warm-light dark:text-[#D48090] italic">
                 Launching soon on Amazon — get notified when it&apos;s live!
               </p>
             )}
@@ -118,12 +118,12 @@ export default function BookPage() {
         </div>
       </section>
 
-      <section className="bg-cream-medium dark:bg-[#211620] py-16 px-4 sm:px-6 transition-colors duration-300">
+      <section className="bg-cream-medium dark:bg-[#1C0F15] py-16 px-4 sm:px-6 transition-colors duration-300">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-warm-brown dark:text-cream mb-8">
             The Heart Behind the Book
           </h2>
-          <p className="font-sans text-warm-muted dark:text-[#C09AA8] leading-relaxed text-lg mb-8">
+          <p className="font-sans text-warm-muted dark:text-[#E8A0B0] leading-relaxed text-lg mb-8">
             Single Details was written as a prayer — that every woman who reads it will walk away
             knowing she is seen, known, and loved by a God who doesn&apos;t miss a thing in her life.
           </p>
@@ -139,14 +139,14 @@ export default function BookPage() {
         </div>
       </section>
 
-      <section className="bg-cream dark:bg-[#1C1218] py-16 px-4 sm:px-6 transition-colors duration-300">
+      <section className="bg-cream dark:bg-[#140A0E] py-16 px-4 sm:px-6 transition-colors duration-300">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="bg-blush-light dark:bg-[#2A1D26] border border-blush dark:border-[#3D1F30] rounded-3xl p-10">
+          <div className="bg-blush-light dark:bg-[#241520] border border-blush dark:border-[#4A1E30] rounded-3xl p-10">
             <BookOpen className="w-12 h-12 text-rose-deep mx-auto mb-4" />
             <h3 className="font-serif text-2xl text-warm-brown dark:text-cream mb-3">
               {book.status === 'available' ? 'Get Your Copy Today' : 'Be the First to Know'}
             </h3>
-            <p className="font-sans text-warm-muted dark:text-[#C09AA8] mb-6">
+            <p className="font-sans text-warm-muted dark:text-[#E8A0B0] mb-6">
               {book.status === 'available'
                 ? 'The book is live on Amazon. Get your copy today and begin your journey.'
                 : "The book is launching soon. Join the community and you'll receive a notification the moment it's available."}

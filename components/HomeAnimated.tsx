@@ -9,7 +9,7 @@ const pillars = [
     icon: <Heart className="w-8 h-8 text-rose-deep" />,
     title: 'Heal',
     desc: 'Receive healing from heartbreak, rejection, and the weight of waiting.',
-    color: 'bg-blush-light dark:bg-[#2A1D26] border-blush dark:border-[#3D1F30]',
+    color: 'bg-blush-light dark:bg-[#241520] border-blush dark:border-[#4A1E30]',
   },
   {
     icon: <Leaf className="w-8 h-8 text-sage-dark" />,
@@ -21,7 +21,7 @@ const pillars = [
     icon: <Star className="w-8 h-8 text-rose" />,
     title: 'Embrace',
     desc: 'Receive singleness as a gift — a season God set apart for you.',
-    color: 'bg-blush-light dark:bg-[#2A1D26] border-blush dark:border-[#3D1F30]',
+    color: 'bg-blush-light dark:bg-[#241520] border-blush dark:border-[#4A1E30]',
   },
 ]
 
@@ -31,7 +31,7 @@ export default function HomeAnimated() {
 
   return (
     <>
-      <section className="bg-cream dark:bg-[#1C1218] py-20 px-4 sm:px-6 transition-colors duration-300" id="story">
+      <section className="bg-cream dark:bg-[#140A0E] py-20 px-4 sm:px-6 transition-colors duration-300" id="story">
         <div className="max-w-5xl mx-auto">
           <div ref={aboutRef} className={`text-center mb-12 ${aboutInView ? 'animate-fade-in-up' : 'opacity-0'}`}>
             <span className="font-sans text-xs font-bold text-rose tracking-widest uppercase">
@@ -45,12 +45,12 @@ export default function HomeAnimated() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className={`relative ${aboutInView ? 'animate-slide-from-left stagger-2' : 'opacity-0'}`}>
-              <div className="rounded-3xl overflow-hidden bg-blush-light dark:bg-[#2A1D26] aspect-[4/5] flex items-center justify-center border border-blush dark:border-[#3D1F30]">
+              <div className="rounded-3xl overflow-hidden bg-blush-light dark:bg-[#241520] aspect-[4/5] flex items-center justify-center border border-blush dark:border-[#4A1E30]">
                 <div className="text-center px-8">
                   <div className="w-20 h-20 rounded-full bg-rose/20 flex items-center justify-center mx-auto mb-4">
                     <Leaf className="w-10 h-10 text-rose" />
                   </div>
-                  <p className="font-sans text-sm text-warm-muted dark:text-[#C09AA8] italic">Author photo coming soon</p>
+                  <p className="font-sans text-sm text-warm-muted dark:text-[#E8A0B0] italic">Author photo coming soon</p>
                   <p className="font-serif text-lg text-rose-deep mt-2">Jesula</p>
                 </div>
               </div>
@@ -58,20 +58,20 @@ export default function HomeAnimated() {
             </div>
 
             <div className={`flex flex-col gap-6 ${aboutInView ? 'animate-slide-from-right stagger-3' : 'opacity-0'}`}>
-              <p className="font-sans text-warm-muted dark:text-[#C09AA8] leading-relaxed">
+              <p className="font-sans text-warm-muted dark:text-[#E8A0B0] leading-relaxed">
                 <em className="font-serif text-warm-brown dark:text-cream text-lg">Single Details</em>{' '}
                 was born out of a deeply personal season of heartbreak, healing, and
                 rediscovering my identity in Christ. In 2013, I experienced a heartbreak I didn&apos;t
                 foresee. I found myself wrestling with rejection, disappointment, and questions
                 about my worth.
               </p>
-              <p className="font-sans text-warm-muted dark:text-[#C09AA8] leading-relaxed">
+              <p className="font-sans text-warm-muted dark:text-[#E8A0B0] leading-relaxed">
                 However, what began as a painful season became a turning point. In that
                 vulnerable place, kneeling before Him with my alabaster box — broken and
                 surrendered — God met me, not with condemnation, but with compassion and
                 restoration.
               </p>
-              <p className="font-sans text-warm-muted dark:text-[#C09AA8] leading-relaxed">
+              <p className="font-sans text-warm-muted dark:text-[#E8A0B0] leading-relaxed">
                 I came to understand that healing is not automatic — it requires real work.
                 Forgiveness, surrender, and honest self-examination are foundational
                 to wholeness and a healthy relationship with God and others.
@@ -97,7 +97,7 @@ export default function HomeAnimated() {
         </div>
       </section>
 
-      <section className="bg-cream-medium dark:bg-[#211620] py-16 px-4 sm:px-6 transition-colors duration-300">
+      <section className="bg-cream-medium dark:bg-[#1C0F15] py-16 px-4 sm:px-6 transition-colors duration-300">
         <div className="max-w-5xl mx-auto">
           <div ref={pillarsRef} className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {pillars.map((pillar, i) => (
@@ -107,11 +107,11 @@ export default function HomeAnimated() {
                   pillarsInView ? `animate-fade-in-up stagger-${i + 1}` : 'opacity-0'
                 }`}
               >
-                <div className="w-16 h-16 rounded-full bg-white dark:bg-[#2A1D26] flex items-center justify-center shadow-sm transition-transform duration-300 hover:scale-110">
+                <div className="w-16 h-16 rounded-full bg-white dark:bg-[#241520] flex items-center justify-center shadow-sm transition-transform duration-300 hover:scale-110">
                   {pillar.icon}
                 </div>
                 <h3 className="font-serif text-2xl text-warm-brown dark:text-cream">{pillar.title}</h3>
-                <p className="font-sans text-warm-muted dark:text-[#C09AA8] leading-relaxed text-sm">{pillar.desc}</p>
+                <p className="font-sans text-warm-muted dark:text-[#E8A0B0] leading-relaxed text-sm">{pillar.desc}</p>
               </div>
             ))}
           </div>

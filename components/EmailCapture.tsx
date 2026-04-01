@@ -47,17 +47,17 @@ export default function EmailCapture({ title, subtitle, compact = false }: Email
           <CheckCircle className="w-8 h-8 text-sage-dark" />
         </div>
         <h3 className="font-serif text-2xl text-warm-brown dark:text-cream">You&apos;re In, Beautiful Sister!</h3>
-        <p className="font-sans text-warm-muted dark:text-[#C09AA8] max-w-sm leading-relaxed">
+        <p className="font-sans text-warm-muted dark:text-[#E8A0B0] max-w-sm leading-relaxed">
           Check your inbox for a welcome message and your free gift. I&apos;m so glad you&apos;re here.
         </p>
-        <p className="font-sans text-xs text-warm-light dark:text-[#9B7A88] italic">
+        <p className="font-sans text-xs text-warm-light dark:text-[#D48090] italic">
           (Don&apos;t see it? Check your spam or promotions folder.)
         </p>
       </div>
     )
   }
 
-  const input_class = "px-4 py-3 rounded-xl border border-blush dark:border-[#3D1F30] bg-white dark:bg-[#1C1218] font-sans text-warm-brown dark:text-cream placeholder-warm-light dark:placeholder-[#6B4A58] focus:outline-none focus:border-rose focus:ring-2 focus:ring-rose/20 transition-all"
+  const input_class = "px-4 py-3 rounded-xl border border-blush dark:border-[#4A1E30] bg-white dark:bg-[#140A0E] font-sans text-warm-brown dark:text-cream placeholder-warm-light dark:placeholder-[#7B5E57] focus:outline-none focus:border-rose focus:ring-2 focus:ring-rose/20 transition-all"
 
   return (
     <div className={compact ? '' : 'max-w-lg mx-auto'}>
@@ -67,7 +67,7 @@ export default function EmailCapture({ title, subtitle, compact = false }: Email
         </h3>
       )}
       {subtitle && (
-        <p className="font-sans text-warm-muted dark:text-[#C09AA8] text-center mb-6 leading-relaxed">
+        <p className="font-sans text-warm-muted dark:text-[#E8A0B0] text-center mb-6 leading-relaxed">
           {subtitle}
         </p>
       )}
@@ -75,7 +75,7 @@ export default function EmailCapture({ title, subtitle, compact = false }: Email
       <form onSubmit={handleSubmit} className="flex flex-col gap-4" suppressHydrationWarning>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex flex-col gap-1">
-            <label className="font-sans text-sm font-bold text-warm-muted dark:text-[#C09AA8]" htmlFor="firstName">
+            <label className="font-sans text-sm font-bold text-warm-muted dark:text-[#E8A0B0]" htmlFor="firstName">
               First Name <span className="text-rose-deep">*</span>
             </label>
             <input
@@ -90,7 +90,7 @@ export default function EmailCapture({ title, subtitle, compact = false }: Email
             />
           </div>
           <div className="flex flex-col gap-1">
-            <label className="font-sans text-sm font-bold text-warm-muted dark:text-[#C09AA8]" htmlFor="lastName">
+            <label className="font-sans text-sm font-bold text-warm-muted dark:text-[#E8A0B0]" htmlFor="lastName">
               Last Name
             </label>
             <input
@@ -106,7 +106,7 @@ export default function EmailCapture({ title, subtitle, compact = false }: Email
         </div>
 
         <div className="flex flex-col gap-1">
-          <label className="font-sans text-sm font-bold text-warm-muted dark:text-[#C09AA8]" htmlFor="email">
+          <label className="font-sans text-sm font-bold text-warm-muted dark:text-[#E8A0B0]" htmlFor="email">
             Email Address <span className="text-rose-deep">*</span>
           </label>
           <input
@@ -122,7 +122,7 @@ export default function EmailCapture({ title, subtitle, compact = false }: Email
         </div>
 
         <div className="flex flex-col gap-2 pt-1">
-          <p className="font-sans text-sm font-bold text-warm-muted dark:text-[#C09AA8]">I&apos;d like to receive:</p>
+          <p className="font-sans text-sm font-bold text-warm-muted dark:text-[#E8A0B0]">I&apos;d like to receive:</p>
           <label className="flex items-center gap-2 cursor-pointer">
             <input
               type="checkbox"
@@ -130,7 +130,7 @@ export default function EmailCapture({ title, subtitle, compact = false }: Email
               onChange={(e) => setNotifyBooks(e.target.checked)}
               className="accent-rose-deep w-4 h-4"
             />
-            <span className="font-sans text-sm text-warm-muted dark:text-[#C09AA8]">
+            <span className="font-sans text-sm text-warm-muted dark:text-[#E8A0B0]">
               Book launch &amp; new release notifications
             </span>
           </label>
@@ -141,7 +141,7 @@ export default function EmailCapture({ title, subtitle, compact = false }: Email
               onChange={(e) => setNotifyEncouragement(e.target.checked)}
               className="accent-rose-deep w-4 h-4"
             />
-            <span className="font-sans text-sm text-warm-muted dark:text-[#C09AA8]">
+            <span className="font-sans text-sm text-warm-muted dark:text-[#E8A0B0]">
               Weekly words of encouragement
             </span>
           </label>
@@ -169,7 +169,7 @@ export default function EmailCapture({ title, subtitle, compact = false }: Email
           )}
         </button>
 
-        <p className="font-sans text-xs text-warm-light dark:text-[#9B7A88] text-center">
+        <p className="font-sans text-xs text-warm-light dark:text-[#D48090] text-center">
           No spam. Ever. Unsubscribe anytime.
         </p>
       </form>
