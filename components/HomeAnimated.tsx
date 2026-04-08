@@ -19,7 +19,7 @@ const pillars = [
   },
   {
     icon: <Star className="w-8 h-8 text-rose" />,
-    title: 'Embrace',
+    title: 'Bloom',
     desc: 'Receive singleness as a gift, a season God set apart for you.',
     color: 'bg-blush-light dark:bg-[#241520] border-blush dark:border-[#4A1E30]',
   },
