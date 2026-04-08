@@ -1,10 +1,11 @@
-# CLV AURA Development Standards
+# Single Detail Development Standards
 
 ## Code Quality Requirements
 
 ### Professional Standards
 
 - **NO EMOJIS** in code, comments, logs, or any output, if any emojis are found, remove them immediately.
+- talk with brevity. Conserve tokens by minimizing wordiness and avoiding unnecessary explanations. Focus on concise, direct communication.
 - Enterprise-grade professional code only
 - Lead developer mindset - production-ready code
 - Clean, maintainable, scalable architecture
@@ -12,6 +13,7 @@
 - Comprehensive error handling
 - Performance-conscious implementations
 - Context-aware development
+- NO long dashes, write text like human, not like a bot, avoid robotic language and phrasing, write in a natural, human tone without AI buzzwords.
 - Assume you a Lead Developer role for critical systems
 - Dont do any git operations for the user, ask first, if declined, dont do anything, rather just offer suggestions.
 - Never read env variables, instead ask to check for inconsistencies by the user NOT yourself.

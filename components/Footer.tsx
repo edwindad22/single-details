@@ -44,7 +44,7 @@ export default function Footer() {
         <div className="flex flex-col gap-3">
           <h4 className="font-serif text-lg text-blush font-semibold mb-1">Connect</h4>
           <p className="font-sans text-sm text-cream/70 leading-relaxed">
-            For speaking engagements, collaborations, or just to say hello — reach out.
+            For speaking engagements, collaborations, or just to say hello, reach out.
           </p>
           <div className="flex gap-4 mt-2">
             {/* Instagram */}

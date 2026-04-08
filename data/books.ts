@@ -7,6 +7,7 @@ export interface Book {
   subtitle?: string
   author: string
   coverImage?: string       // path in /public (e.g. '/single-details-book-cover.jpg')
+  backCoverImage?: string   // path in /public — back cover for crossfade cards
   description: string
   shortDescription?: string
   features?: string[]
@@ -26,9 +27,9 @@ export const books: Book[] = [
     id: 'single-details',
     title: 'Single Details',
     author: 'Jesula',
-    coverImage: '/single-details-book-cover.jpg',
+    coverImage: '/book-cover-new.jpg',
     description:
-      'A faith-based book for every single woman who needs to know that God is not absent in this season — He is at work in it, for everything He already has for her.',
+      'A faith-based book for every single woman who needs to know that God is not absent in this season. He is at work in it, for everything He already has for her.',
     shortDescription: 'Heal. Grow. Embrace your season with purpose.',
     features: [
       'Face heartbreak and rejection honestly',
@@ -46,7 +47,8 @@ export const books: Book[] = [
     id: 'single-details-journal',
     title: 'Single Details Prayer Journal',
     author: 'Jesula',
-    coverImage: '/single-details-journal-cover.jpg',
+    coverImage: '/journal-front.jpg',
+    backCoverImage: '/journal-back.jpg',
     description: 'A prayer journal to help you talk to God honestly through this season.',
     status: 'coming-soon',
     category: 'journal',
@@ -56,7 +58,7 @@ export const books: Book[] = [
     title: 'Single Details T-Shirt',
     author: 'Single Details',
     description:
-      'Wear your faith. Soft, quality tee with the Single Details message — reminder that you are being prepared.',
+      'Wear your faith. Soft, quality tee with the Single Details message: a reminder that you are being prepared.',
     status: 'coming-soon',
     category: 'apparel',
   },
@@ -91,7 +93,7 @@ export const books: Book[] = [
     title: 'Single Details Tote Bag',
     author: 'Single Details',
     description:
-      'Carry your truth everywhere you go — stylish, faith-filled, and made for the woman becoming whole.',
+      'Carry your truth everywhere you go. Stylish, faith-filled, and made for the woman becoming whole.',
     status: 'coming-soon',
     category: 'lifestyle',
   },

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import MerchGrid from '@/components/MerchGrid'
+import { sanityClient, isSanityConfigured, ALL_MERCH_QUERY } from '@/lib/sanity'
+import { getMerchItems, type Book } from '@/data/books'
 
 export const metadata: Metadata = {
   title: 'Merch & Resources',
@@ -7,11 +9,15 @@ export const metadata: Metadata = {
     'Shop the Single Details collection — journals, apparel, stationery, and lifestyle items to carry your faith into every room.',
 }
 
-export default function MerchPage() {
+export default async function MerchPage() {
+  const items: Book[] = isSanityConfigured()
+    ? await sanityClient.fetch<Book[]>(ALL_MERCH_QUERY)
+    : getMerchItems()
+
   return (
     <>
       {/* Header */}
-      <section className="grad-hero-alt py-16 px-4 sm:px-6 text-center relative overflow-hidden animate-fade-in-up">
+      <section className="bg-transparent py-16 px-4 sm:px-6 text-center relative overflow-hidden animate-fade-in-up">
         <span className="font-sans text-xs font-bold text-sage-dark tracking-widest uppercase">
           Shop the Collection
         </span>
@@ -25,7 +31,7 @@ export default function MerchPage() {
       </section>
 
       {/* Interactive grid (client component) */}
-      <MerchGrid />
+      <MerchGrid items={items} />
     </>
   )
 }

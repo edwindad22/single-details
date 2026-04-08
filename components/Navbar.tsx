@@ -18,7 +18,7 @@ export default function Navbar() {
   const pathname = usePathname()
 
   return (
-    <nav className="sticky top-0 z-50 bg-cream/95 dark:bg-[#140A0E]/95 backdrop-blur-sm border-b border-blush dark:border-[#4A1E30] shadow-sm transition-colors duration-300">
+    <nav className="sticky top-0 z-50 bg-cream/80 dark:bg-[#140A0E]/95 border-b border-blush/60 dark:border-[#4A1E30] shadow-sm transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
 
         <Link href="/" className="flex items-center gap-2 no-underline group">
@@ -79,7 +79,7 @@ export default function Navbar() {
           menuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="bg-cream dark:bg-[#140A0E] border-t border-blush dark:border-[#4A1E30] px-4 py-4 flex flex-col gap-4">
+        <div className="bg-cream/90 dark:bg-[#140A0E]/95 border-t border-blush/60 dark:border-[#4A1E30] px-4 py-4 flex flex-col gap-4">
           {navLinks.map((link, i) => {
             const active = pathname === link.href
             return (

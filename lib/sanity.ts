@@ -9,21 +9,31 @@
  * Until Sanity is set up, all queries fall back to the local books.ts data.
  */
 
-import { createClient } from '@sanity/client'
-
-export const sanityClient = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? 'placeholder',
-  dataset:   process.env.NEXT_PUBLIC_SANITY_DATASET    ?? 'production',
-  apiVersion: '2024-01-01',
-  useCdn: false, // false = always fresh for ISR revalidation
-  token: process.env.SANITY_API_TOKEN,
-})
+import { createClient, type SanityClient } from '@sanity/client'
 
 export function isSanityConfigured(): boolean {
-  return (
-    !!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID &&
-    process.env.NEXT_PUBLIC_SANITY_PROJECT_ID !== 'placeholder'
-  )
+  const id = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+  return !!id && id !== 'placeholder' && id !== 'YOUR_PROJECT_ID'
+}
+
+// Lazily created — avoids Sanity's projectId format validation when env vars are not set
+let _client: SanityClient | null = null
+
+export const sanityClient = {
+  fetch<T>(query: string, params?: Record<string, string>): Promise<T> {
+    if (!_client) {
+      _client = createClient({
+        projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
+        dataset:   process.env.NEXT_PUBLIC_SANITY_DATASET ?? 'production',
+        apiVersion: '2024-01-01',
+        useCdn: false,
+        token: process.env.SANITY_API_TOKEN,
+      })
+    }
+    return params
+      ? _client.fetch<T>(query, params)
+      : _client.fetch<T>(query)
+  },
 }
 
 /** GROQ query — fetch all books ordered by release date */
@@ -38,7 +48,7 @@ export const ALL_BOOKS_QUERY = `
     features,
     status,
     releaseDate,
-    amazonAffiliateUrl,
+    "amazonUrl": amazonAffiliateUrl,
     asin,
     price,
     category,
@@ -58,9 +68,51 @@ export const BOOK_BY_SLUG_QUERY = `
     features,
     status,
     releaseDate,
-    amazonAffiliateUrl,
+    "amazonUrl": amazonAffiliateUrl,
     asin,
     price,
     category,
+  }
+`
+
+/** GROQ query — fetch all merch items (non-book categories) */
+export const ALL_MERCH_QUERY = `
+  *[_type == "book" && category != "book"] | order(_createdAt asc) {
+    _id,
+    title,
+    author,
+    "coverImage": coverImage.asset->url,
+    description,
+    shortDescription,
+    status,
+    releaseDate,
+    "amazonUrl": amazonAffiliateUrl,
+    asin,
+    price,
+    category,
+  }
+`
+
+/** GROQ query — fetch the site text singleton */
+export const SITE_TEXT_QUERY = `
+  *[_type == "siteText"][0] {
+    heroHeading,
+    heroSubheading,
+    heroTagline,
+    storyHeading,
+    storyBody,
+    bookDescription,
+    bookFeatures,
+  }
+`
+
+/** GROQ query — fetch active announcement banners */
+export const ANNOUNCEMENTS_QUERY = `
+  *[_type == "announcement" && active == true] | order(_createdAt asc) {
+    "id": _id,
+    message,
+    linkText,
+    linkHref,
+    active,
   }
 `

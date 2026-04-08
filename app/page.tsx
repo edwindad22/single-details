@@ -29,7 +29,7 @@ const gifts = [
 export default function HomePage() {
   return (
     <>
-      <section className="relative overflow-hidden grad-hero min-h-[calc(100vh-72px)] flex items-center">
+      <section className="relative overflow-hidden bg-transparent min-h-[calc(100vh-72px)] flex items-center">
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-20 text-center">
           <div className="animate-fade-in-up stagger-1 inline-flex items-center gap-2 bg-blush/40 dark:bg-blush/10 border border-blush dark:border-blush/30 rounded-full px-4 py-1.5 mb-8">
             <Leaf className="w-4 h-4 text-sage-dark" />
@@ -48,7 +48,7 @@ export default function HomePage() {
           </h1>
 
           <p className="animate-fade-in-up stagger-4 font-sans text-warm-muted dark:text-[#E8A0B0] text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
-            Welcome to Single Details — a community where your season of singleness is seen,
+            Welcome to Single Details, a community where your season of singleness is seen,
             honored, and valued for what it truly is.
             You are being <strong className="text-warm-brown dark:text-cream font-bold">prepared</strong>,{' '}
             <strong className="text-warm-brown dark:text-cream font-bold">called</strong>, and{' '}
@@ -87,16 +87,16 @@ export default function HomePage() {
 
       <HomeAnimated />
 
-      <section className="relative overflow-hidden grad-form py-20 px-4 sm:px-6" id="free-gift">
+      <section className="relative overflow-hidden bg-transparent dark:bg-[#140A0E] py-20 px-4 sm:px-6" id="free-gift">
         <div className="relative z-10 max-w-3xl mx-auto text-center">
-          <span className="font-sans text-xs font-bold text-blush tracking-widest uppercase">
+          <span className="font-sans text-xs font-bold text-rose tracking-widest uppercase">
             Your Free Gift Awaits
           </span>
-          <h2 className="font-serif text-4xl text-cream mt-3 mb-4">
+          <h2 className="font-serif text-4xl text-warm-brown dark:text-cream mt-3 mb-4">
             Join the Single Details Community
           </h2>
-          <p className="font-sans text-blush-medium leading-relaxed mb-10 max-w-xl mx-auto">
-            Sign up for free and receive a handpicked gift to encourage your heart — plus
+          <p className="font-sans text-warm-muted dark:text-[#E8A0B0] leading-relaxed mb-10 max-w-xl mx-auto">
+            Sign up for free and receive a handpicked gift to encourage your heart, plus
             book updates, event invites, and community love delivered to your inbox.
           </p>
 
@@ -104,15 +104,15 @@ export default function HomePage() {
             {gifts.map((gift) => (
               <div
                 key={gift.title}
-                className="bg-white/15 backdrop-blur-sm border border-white/30 rounded-2xl p-5 text-left"
+                className="bg-white/70 dark:bg-white/10 border border-blush dark:border-white/20 rounded-2xl p-5 text-left"
               >
-                <div className="w-10 h-10 rounded-full bg-blush/50 flex items-center justify-center mb-3 shadow-sm">
+                <div className="mb-3">
                   {gift.icon === 'book'  && <BookOpen className="w-6 h-6 text-rose-deep" />}
                   {gift.icon === 'star'  && <Star     className="w-6 h-6 text-sage-dark" />}
                   {gift.icon === 'heart' && <Heart    className="w-6 h-6 text-rose-deep" />}
                 </div>
-                <h4 className="font-serif text-base text-cream mb-1">{gift.title}</h4>
-                <p className="font-sans text-xs text-blush-medium leading-relaxed">{gift.desc}</p>
+                <h4 className="font-serif text-base text-warm-brown dark:text-cream mb-1">{gift.title}</h4>
+                <p className="font-sans text-xs text-warm-muted dark:text-[#E8A0B0] leading-relaxed">{gift.desc}</p>
               </div>
             ))}
           </div>

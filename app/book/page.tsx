@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { BookOpen, Heart, Star, Leaf, ShoppingCart, Gift, Bell } from 'lucide-react'
-import { getMainBook } from '@/data/books'
+import { getMainBook, type Book } from '@/data/books'
+import { sanityClient, isSanityConfigured, BOOK_BY_SLUG_QUERY } from '@/lib/sanity'
 
 export const metadata: Metadata = {
   title: 'The Book',
@@ -10,12 +11,14 @@ export const metadata: Metadata = {
     'Single Details — a faith-based book for every single woman who needs to know that God is at work in this season.',
 }
 
-export default function BookPage() {
-  const book = getMainBook()
+export default async function BookPage() {
+  const book: Book = isSanityConfigured()
+    ? await sanityClient.fetch<Book>(BOOK_BY_SLUG_QUERY, { slug: 'single-details' })
+    : getMainBook()
 
   return (
     <>
-      <section className="relative overflow-hidden grad-hero-alt py-20 px-4 sm:px-6">
+      <section className="relative overflow-hidden bg-transparent py-20 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
           <div className="flex justify-center md:justify-end">
             <div className="relative book-reveal">
@@ -54,7 +57,7 @@ export default function BookPage() {
 
             {book.features && (
               <ul className="flex flex-col gap-3">
-                {book.features.map((f, i) => {
+                {book.features.map((f: string, i: number) => {
                   const icons  = [Heart, Leaf, Star, BookOpen]
                   const colors = ['text-rose-deep', 'text-sage-dark', 'text-rose', 'text-warm-muted']
                   const Icon   = icons[i % icons.length]
@@ -111,7 +114,7 @@ export default function BookPage() {
 
             {book.status === 'coming-soon' && (
               <p className="font-sans text-sm text-warm-light dark:text-[#D48090] italic">
-                Launching soon on Amazon — get notified when it&apos;s live!
+                Launching soon on Amazon. Get notified when it&apos;s live!
               </p>
             )}
           </div>
@@ -124,16 +127,16 @@ export default function BookPage() {
             The Heart Behind the Book
           </h2>
           <p className="font-sans text-warm-muted dark:text-[#E8A0B0] leading-relaxed text-lg mb-8">
-            Single Details was written as a prayer — that every woman who reads it will walk away
+            Single Details was written as a prayer: that every woman who reads it will walk away
             knowing she is seen, known, and loved by a God who doesn&apos;t miss a thing in her life.
           </p>
           <blockquote className="scripture max-w-2xl mx-auto text-left">
             <p className="font-serif text-xl leading-relaxed mb-2">
-              &ldquo;My prayer is that as you read, you will see that God is at work in your life —
+              &ldquo;My prayer is that as you read, you will see that God is at work in your life,
               for everything He already has for you.&rdquo;
             </p>
             <footer className="font-sans text-sm text-rose-deep font-bold not-italic">
-              — Jesula, Single Details
+              Jesula, Single Details
             </footer>
           </blockquote>
         </div>

@@ -3,8 +3,7 @@ import type { NextConfig } from 'next'
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
-      // Sanity CDN — add project ID when Sanity is connected
-      // { protocol: 'https', hostname: 'cdn.sanity.io' },
+      { protocol: 'https', hostname: 'cdn.sanity.io' },
     ],
   },
 

@@ -27,7 +27,7 @@ const gifts = [
     number: '03',
     icon: 'heart' as const,
     title: '"Becoming Whole Before Love" Mini Devotional',
-    desc: 'A short devotional through healing, identity, and surrender — so you walk into every season whole.',
+    desc: 'A short devotional through healing, identity, and surrender, so you walk into every season whole.',
     color: 'bg-blush-light dark:bg-[#241520] border-blush dark:border-[#4A1E30]',
   },
 ]
@@ -41,7 +41,7 @@ const testimonials = [
   },
   {
     quote:
-      'The journal prompts changed how I pray. I never knew I had so much to work through — and God was waiting for me to bring it all to Him.',
+      'The journal prompts changed how I pray. I never knew I had so much to work through. God was waiting for me to bring it all to Him.',
     name: 'M. Joseph',
     role: 'Community Member',
   },
@@ -51,7 +51,7 @@ export default function SubscribePage() {
   return (
     <>
       {/* Header */}
-      <section className="grad-hero-alt py-20 px-4 sm:px-6 text-center">
+      <section className="bg-transparent py-20 px-4 sm:px-6 text-center">
         <div className="inline-flex items-center gap-2 bg-blush/40 dark:bg-blush/10 border border-blush dark:border-blush/30 rounded-full px-4 py-1.5 mb-8">
           <Leaf className="w-4 h-4 text-sage-dark" />
           <span className="font-sans text-xs font-bold text-warm-muted dark:text-[#E8A0B0] tracking-widest uppercase">
@@ -63,7 +63,7 @@ export default function SubscribePage() {
         </h1>
         <p className="font-sans text-warm-muted dark:text-[#E8A0B0] text-lg leading-relaxed max-w-2xl mx-auto">
           If you are here, it is because something in your heart knows this season means more.
-          Join the Single Details community and receive your free gift — a collection of resources
+          Join the Single Details community and receive your free gift: a collection of resources
           to encourage, strengthen, and remind you that God is working in every detail.
         </p>
       </section>
@@ -106,20 +106,20 @@ export default function SubscribePage() {
             <p className="font-sans text-warm-muted dark:text-[#E8A0B0] leading-relaxed">
               <strong className="text-warm-brown dark:text-cream">Plus,</strong> as a community member you&apos;ll
               be the first to hear about book updates, launch announcements, events, and
-              blog posts — all to keep you fed and close to God.
+              blog posts, all to keep you fed and close to God.
             </p>
           </div>
         </div>
       </section>
 
       {/* Form */}
-      <section className="grad-form py-16 px-4 sm:px-6 relative overflow-hidden">
-        <div className="max-w-lg mx-auto relative z-10">
+      <section className="bg-transparent dark:bg-[#140A0E] py-16 px-4 sm:px-6">
+        <div className="max-w-lg mx-auto">
           <div className="text-center mb-8">
-            <h2 className="font-serif text-3xl md:text-4xl text-cream mb-3">
+            <h2 className="font-serif text-3xl md:text-4xl text-warm-brown dark:text-cream mb-3">
               Join the Community
             </h2>
-            <p className="font-sans text-blush-medium">
+            <p className="font-sans text-warm-muted dark:text-[#E8A0B0]">
               Enter your details below to receive your free gift and join thousands of
               sisters walking this same road.
             </p>
@@ -168,7 +168,7 @@ export default function SubscribePage() {
             according to the power that works in us…&rdquo;
           </p>
           <footer className="font-sans text-sm text-rose-deep font-bold not-italic mt-3">
-            — Ephesians 3:20
+            Ephesians 3:20
           </footer>
         </blockquote>
       </section>

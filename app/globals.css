@@ -55,7 +55,7 @@
 
   html {
     scroll-behavior: smooth;
-    background-color: #FDF8F3;
+    background-color: transparent;
   }
   html.dark {
     background-color: #140A0E;
@@ -64,7 +64,7 @@
   body {
     margin: 0;
     padding: 0;
-    background-color: #FDF8F3;
+    background-color: transparent;
     color: #2C1810;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -150,6 +150,16 @@ blockquote.scripture {
   transform-origin: bottom left;
 }
 
+/* ── Flower overlay blend modes ──────────────────────────────────────────── */
+/*
+  Light bg: multiply — cream areas dissolve into page, flower colors remain
+  Dark bg:  screen   — same flowers, petals glow luminously against dark bg
+  One set of elements, CSS does the switch via the .dark class.
+*/
+.flower-overlay {
+  mix-blend-mode: multiply;
+}
+
 /* ── Standard animations ──────────────────────────────────────────────────── */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(22px); }
@@ -180,27 +190,18 @@ blockquote.scripture {
 }
 .animate-slide-down { animation: slideDown 0.4s ease-out both; }
 
-/* ── Flip card ───────────────────────────────────────────────────────────── */
-.flip-card { perspective: 1100px; }
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
-  transform-style: preserve-3d;
-}
-.flip-card:hover .flip-card-inner,
-.flip-card:focus-within .flip-card-inner { transform: rotateY(180deg); }
-.flip-card-front,
-.flip-card-back {
+/* ── Cover card crossfade ────────────────────────────────────────────────── */
+.cover-card { position: relative; overflow: hidden; }
+.cover-card-back {
   position: absolute;
   inset: 0;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.45s ease;
   border-radius: inherit;
   overflow: hidden;
 }
-.flip-card-back { transform: rotateY(180deg); }
+.cover-card:hover .cover-card-back,
+.cover-card:focus-within .cover-card-back { opacity: 1; }
 
 /* ── Slide animations ────────────────────────────────────────────────────── */
 @keyframes slideFromLeft {

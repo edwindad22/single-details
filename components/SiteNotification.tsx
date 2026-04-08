@@ -1,21 +1,25 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { X, BookOpen } from 'lucide-react'
-import { announcements } from '@/data/announcements'
+import type { Announcement } from '@/data/announcements'
 
-export default function SiteNotification() {
+export default function SiteNotification({ announcements }: { announcements: Announcement[] }) {
   const active = announcements.filter((a) => a.active)
 
-  const [dismissed, setDismissed] = useState<string[]>(() => {
+  // Always start with [] so server and client first render match,
+  // then load dismissed ids from sessionStorage after hydration.
+  const [dismissed, setDismissed] = useState<string[]>([])
+
+  useEffect(() => {
     try {
       const stored = sessionStorage.getItem('dismissed-notifications')
-      return stored ? JSON.parse(stored) : []
+      if (stored) setDismissed(JSON.parse(stored))
     } catch {
-      return []
+      // sessionStorage unavailable — no-op
     }
-  })
+  }, [])
 
   const dismiss = (id: string) => {
     const next = [...dismissed, id]
