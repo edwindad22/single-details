@@ -12,6 +12,7 @@ export default defineConfig({
   title: 'Single Details',
   projectId,
   dataset,
+  basePath: '/studio',
 
   plugins: [
     structureTool({
