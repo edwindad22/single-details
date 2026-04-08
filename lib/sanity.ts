@@ -39,7 +39,7 @@ export const sanityClient = {
 /** GROQ query — fetch all books ordered by release date */
 export const ALL_BOOKS_QUERY = `
   *[_type == "book"] | order(releaseDate asc) {
-    _id,
+    "id": _id,
     title,
     author,
     "coverImage": coverImage.asset->url,
@@ -59,7 +59,7 @@ export const ALL_BOOKS_QUERY = `
 /** GROQ query — fetch single book by slug */
 export const BOOK_BY_SLUG_QUERY = `
   *[_type == "book" && slug.current == $slug][0] {
-    _id,
+    "id": _id,
     title,
     author,
     "coverImage": coverImage.asset->url,
@@ -78,7 +78,7 @@ export const BOOK_BY_SLUG_QUERY = `
 /** GROQ query — fetch all merch items (non-book categories) */
 export const ALL_MERCH_QUERY = `
   *[_type == "book" && category != "book"] | order(_createdAt asc) {
-    _id,
+    "id": _id,
     title,
     author,
     "coverImage": coverImage.asset->url,
