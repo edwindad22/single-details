@@ -10,9 +10,10 @@ export const metadata: Metadata = {
 }
 
 export default async function MerchPage() {
-  const items: Book[] = isSanityConfigured()
-    ? await sanityClient.fetch<Book[]>(ALL_MERCH_QUERY)
-    : getMerchItems()
+  const items: Book[] =
+    (isSanityConfigured()
+      ? await sanityClient.fetch<Book[]>(ALL_MERCH_QUERY)
+      : null) ?? getMerchItems()
 
   return (
     <>

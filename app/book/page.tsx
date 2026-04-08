@@ -12,9 +12,10 @@ export const metadata: Metadata = {
 }
 
 export default async function BookPage() {
-  const book: Book = isSanityConfigured()
-    ? await sanityClient.fetch<Book>(BOOK_BY_SLUG_QUERY, { slug: 'single-details' })
-    : getMainBook()
+  const book: Book =
+    (isSanityConfigured()
+      ? await sanityClient.fetch<Book>(BOOK_BY_SLUG_QUERY, { slug: 'single-details' })
+      : null) ?? getMainBook()
 
   return (
     <>
