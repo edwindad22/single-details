@@ -1,17 +1,8 @@
-/**
- * Embedded Sanity Studio at /studio
- *
- * Access: navigate to /studio on local (localhost:3000/studio) or production.
- * Authentication is handled by Sanity — only invited team members can log in.
- * Manage team access at: https://sanity.io/manage
- */
-import { NextStudio } from 'next-sanity/studio'
-import config from '@/sanity.config'
-
+export { metadata, viewport } from 'next-sanity/studio'
 export const dynamic = 'force-dynamic'
 
-export { metadata, viewport } from 'next-sanity/studio'
+import Studio from './Studio'
 
 export default function StudioPage() {
-  return <NextStudio config={config} />
+  return <Studio />
 }
